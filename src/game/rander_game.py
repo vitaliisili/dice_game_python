@@ -28,20 +28,18 @@ class RanderGame:
         self.__game.roll()
 
     def __roll_specific(self):
-        dice = self.__game.dice
-        pos = input(self.__show_text(f"Select positions that you want to keep start from 1 to {len(dice) - 1}: "))
-
         while True:
+            dice = self.__game.dice
             try:
+                pos = input(self.__show_text(f"Select positions that you want to keep start from 1 to {len(dice)}: "))
                 pos = list(map(lambda x: int(x) - 1, pos.split()))
                 if max(pos) > (len(dice) - 1):
                     raise Exception
                 else:
                     self.__game.roll(pos)
-                    break
-
+                    return
             except Exception:
-                print(self.__show_text("Please insert a valid position "))
+                print(self.__show_text("Please insert a valid position ", color.RED))
 
     def __add_die(self, die):
         while True:
@@ -149,13 +147,18 @@ class RanderGame:
         print(self.__show_text(f"{'▁' * 50}{'▁▁▁▁▁▁▁▁▁▁▁▁▁' * (len(dice_list) - 4)}"), end="\n\n")
 
     def play(self):
-        # input("Press ENTER to start the game: ")
+        input("Press ENTER to start the game: ")
         print(self.__show_text(START_GAME, color.RED))
         self.__game.credit_balance -= ROLL_COST
         while self.__game.credit_balance >= ROLL_COST:
             if self.__game.check_winner():
-                self.__game.credit_balance += self.__game.total_points
-
-            self.__display_board()
-            self.__show_menu()
+                self.__game.credit_balance += self.__game.total_points + ROLL_COST
+                self.__display_board()
+                self.__game.roll()
+                self.__show_menu()
+                self.__round += 1
+            else:
+                self.__display_board()
+                self.__show_menu()
+                self.__round += 1
         print(self.__show_text(GAME_OVER, color.RED))
