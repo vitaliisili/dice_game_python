@@ -42,7 +42,7 @@ class BabooGame(DiceGameBase):
             raise PermissionError("Not enough balance")
 
     def add_dice(self, die: Type["DieBase"]):
-        self._dice_board = self._dice_board + die
+        self._dice_board += die
 
     def replace_die(self, pos, die):
         self._dice_board[pos] = die()
