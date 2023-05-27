@@ -57,7 +57,7 @@ class RanderGame:
 
     def __show_die_menu(self):
         print(self.__show_text("""
-1. D4(4 faces)    2. D6(6 faces)     3. D8(8 faces)     4. Exit
+1. D4(4 faces)     2. D6(6 faces)      3. D8(8 faces)      4. Exit
         """))
         current_balance = self.__game.credit_balance
         while True:
@@ -88,14 +88,14 @@ class RanderGame:
 
     def __withdraw(self):
         current_balance = self.__game.credit_balance
-        print(self.__show_text(CONGRATULATIONS, color.GREEN))
-        print(self.__show_text(WIN_AMOUNT % current_balance, color.GREEN))
+        print(self.__show_text(CONGRATULATIONS % current_balance, color.GREEN))
+        # print(self.__show_text(WIN_AMOUNT % current_balance, color.GREEN))
         sys.exit()
 
     def __show_menu(self):
 
         print(self.__show_text("""
-1. Continue     2. Roll specific dice     3. Add new die    4. Withdraw
+1. Continue      2. Roll specific dice      3. Add new die     4. Withdraw
         """))
 
         while True:
@@ -117,7 +117,7 @@ class RanderGame:
     def __display_board(self):
         dice_list = self.__game.dice
 
-        print(self.__show_text(f"\n{'▔' * 50}{'▔▔▔▔▔▔▔▔▔▔▔▔▔' * (len(dice_list) - 4)}"))
+        print(self.__show_text(f"\n{'▔' * 76}"))
         print(self.__show_text("Round:"), self.__show_text(self.__round, color.GREEN), end="    ")
 
         status_lose = self.__show_text("Lose", color.RED)
@@ -144,21 +144,21 @@ class RanderGame:
             print("    ", self.__show_text(type(die).__name__, color.MAGENTA), end="      ")
         print(end="\n")
 
-        print(self.__show_text(f"{'▁' * 50}{'▁▁▁▁▁▁▁▁▁▁▁▁▁' * (len(dice_list) - 4)}"), end="\n\n")
+        print(self.__show_text(f"{'▁' * 76}"), end="\n\n")
 
     def play(self):
         input("Press ENTER to start the game: ")
-        print(self.__show_text(START_GAME, color.RED))
+        print(self.__show_text(START_GAME))
         self.__game.credit_balance -= ROLL_COST
         while self.__game.credit_balance >= ROLL_COST:
             if self.__game.check_winner():
-                self.__game.credit_balance += self.__game.total_points + ROLL_COST
-                # self.__display_board()
-                # self.__game.roll()
+                self.__game.credit_balance += self.__game.total_points
+                self.__display_board()
+                self.__game.roll()
                 self.__show_menu()
                 self.__round += 1
             else:
-                # self.__display_board()
+                self.__display_board()
                 self.__show_menu()
                 self.__round += 1
         print(self.__show_text(GAME_OVER, color.RED))
