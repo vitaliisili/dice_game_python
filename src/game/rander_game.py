@@ -112,12 +112,12 @@ class RanderGame:
                     raise Exception
 
             except Exception:
-                print(self.__show_text("Please select a menu number between 1-4: ", color.RED))
+                print(self.__show_text("Please select a menu number between 1-4", color.RED))
 
     def __display_board(self):
         dice_list = self.__game.dice
 
-        print(self.__show_text(f"{'▔' * 50}{'▔▔▔▔▔▔▔▔▔▔▔▔▔' * (len(dice_list) - 4)}"))
+        print(self.__show_text(f"\n{'▔' * 50}{'▔▔▔▔▔▔▔▔▔▔▔▔▔' * (len(dice_list) - 4)}"))
         print(self.__show_text("Round:"), self.__show_text(self.__round, color.GREEN), end="    ")
 
         status_lose = self.__show_text("Lose", color.RED)
@@ -153,12 +153,12 @@ class RanderGame:
         while self.__game.credit_balance >= ROLL_COST:
             if self.__game.check_winner():
                 self.__game.credit_balance += self.__game.total_points + ROLL_COST
-                self.__display_board()
-                self.__game.roll()
+                # self.__display_board()
+                # self.__game.roll()
                 self.__show_menu()
                 self.__round += 1
             else:
-                self.__display_board()
+                # self.__display_board()
                 self.__show_menu()
                 self.__round += 1
         print(self.__show_text(GAME_OVER, color.RED))
