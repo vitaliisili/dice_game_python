@@ -1,3 +1,3 @@
 # Baboo Dice Game
 
-![baboo](https://prnt.sc/kusJN6Bgxyna)
+![baboo](https://photos.app.goo.gl/3HUcy8iCQyepDNYN9)
