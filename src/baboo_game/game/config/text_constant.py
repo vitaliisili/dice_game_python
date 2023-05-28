@@ -1,5 +1,5 @@
-from src.config.color_config import *
-from src.config.game_config import *
+from .color_config import *
+from .game_config import *
 
 WELCOME_MESSAGE = f"""{BLUE}
             ░░     ░░ ░░░░░░░ ░░       ░░░░░░  ░░░░░░  ░░░    ░░░ ░░░░░░░ 

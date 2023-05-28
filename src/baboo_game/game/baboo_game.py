@@ -1,5 +1,5 @@
-from src.lib.abstract_dice import *
-from src.config.game_config import *
+from .lib.abstract_dice import *
+from .config.game_config import *
 
 
 class BabooGame(DiceGameBase):

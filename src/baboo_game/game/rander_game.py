@@ -1,16 +1,16 @@
 import sys
 
-from src.game.baboo_game import BabooGame
-from src.lib.abstract_dice import *
-import src.config.color_config as color
-from src.config.text_constant import *
-from src.config.game_config import ROLL_COST
+from .config import color_config as color
+from .config import text_constant as text
+from .config import game_config as cfg
+from .lib.abstract_dice import Dice, D4, D6, D8
+from .baboo_game import BabooGame
 
 
 class RanderGame:
     def __init__(self):
-        print(self.__show_text(WELCOME_MESSAGE, color.YELLOW))
-        print(self.__show_text(DICE_IMAGE, color.BLUE))
+        print(self.__show_text(text.WELCOME_MESSAGE, color.YELLOW))
+        print(self.__show_text(text.DICE_IMAGE, color.BLUE))
         self.__player_name = self.__get_player_name()
         self.__board = Dice(D4, D4)
         self.__game = BabooGame(self.__board, self.__player_name)
@@ -43,7 +43,8 @@ class RanderGame:
 
     def __add_die(self, die):
         while True:
-            position = input(self.__show_text("Enter position to replace your die or press enter to append to the end: "))
+            position = input(
+                self.__show_text("Enter position to replace your die or press enter to append to the end: "))
             try:
                 if position == "":
                     print("empty")
@@ -53,7 +54,8 @@ class RanderGame:
                     self.__game.dice[int(position) - 1] = die()
                     return
             except Exception:
-                print(self.__show_text(f"Wrong position please please select between 1 and {len(self.__game.dice)}", color.RED))
+                print(self.__show_text(f"Wrong position please please select between 1 and {len(self.__game.dice)}",
+                                       color.RED))
 
     def __show_die_menu(self):
         print(self.__show_text("""
@@ -66,21 +68,22 @@ class RanderGame:
                 if 1 <= int(menu_number) <= 4:
                     match int(menu_number):
                         case 1:
-                            if current_balance >= DIE4_COST + ROLL_COST:
-                                self.__game.credit_balance -= DIE4_COST
+                            if current_balance >= cfg.DIE4_COST + cfg.ROLL_COST:
+                                self.__game.credit_balance -= cfg.DIE4_COST
                                 self.__add_die(D4)
                                 break
                         case 2:
-                            if current_balance >= DIE6_COST + ROLL_COST:
-                                self.__game.credit_balance -= DIE6_COST
+                            if current_balance >= cfg.DIE6_COST + cfg.ROLL_COST:
+                                self.__game.credit_balance -= cfg.DIE6_COST
                                 self.__add_die(D6)
                                 break
                         case 3:
-                            if current_balance >= DIE8_COST + ROLL_COST:
-                                self.__game.credit_balance -= DIE8_COST
+                            if current_balance >= cfg.DIE8_COST + cfg.ROLL_COST:
+                                self.__game.credit_balance -= cfg.DIE8_COST
                                 self.__add_die(D8)
                                 break
-                        case 4: break
+                        case 4:
+                            break
                 else:
                     raise Exception
             except Exception:
@@ -88,7 +91,7 @@ class RanderGame:
 
     def __withdraw(self):
         current_balance = self.__game.credit_balance
-        print(self.__show_text(CONGRATULATIONS % current_balance, color.GREEN))
+        print(self.__show_text(text.CONGRATULATIONS % current_balance, color.GREEN))
         # print(self.__show_text(WIN_AMOUNT % current_balance, color.GREEN))
         sys.exit()
 
@@ -103,10 +106,14 @@ class RanderGame:
             try:
                 if 1 <= int(menu_number) <= 4:
                     match int(menu_number):
-                        case 1: self.__continue()
-                        case 2: self.__roll_specific()
-                        case 3: self.__show_die_menu()
-                        case 4: self.__withdraw()
+                        case 1:
+                            self.__continue()
+                        case 2:
+                            self.__roll_specific()
+                        case 3:
+                            self.__show_die_menu()
+                        case 4:
+                            self.__withdraw()
                     break
                 else:
                     raise Exception
@@ -137,7 +144,7 @@ class RanderGame:
 
         for line in range(5):
             for die in dice_list:
-                print(self.__show_text(DICE.get(die.face)[line], color.BLUE), end="  ")
+                print(self.__show_text(text.DICE.get(die.face)[line], color.BLUE), end="  ")
             print()
 
         for die in dice_list:
@@ -148,9 +155,9 @@ class RanderGame:
 
     def play(self):
         input("Press ENTER to start the game: ")
-        print(self.__show_text(START_GAME))
-        self.__game.credit_balance -= ROLL_COST
-        while self.__game.credit_balance >= ROLL_COST:
+        print(self.__show_text(text.START_GAME))
+        self.__game.credit_balance -= cfg.ROLL_COST
+        while self.__game.credit_balance >= cfg.ROLL_COST:
             if self.__game.check_winner():
                 self.__game.credit_balance += self.__game.total_points
                 self.__display_board()
@@ -161,4 +168,4 @@ class RanderGame:
                 self.__display_board()
                 self.__show_menu()
                 self.__round += 1
-        print(self.__show_text(GAME_OVER, color.RED))
+        print(self.__show_text(text.GAME_OVER, color.RED))
