@@ -3,7 +3,8 @@ requires = ["setuptools>=61.0", "setuptools_scm[toml]"]
 build-backend = "setuptools.build_meta"
 [project]
 name = "baboo_game"
-version = "2.0.1" # Insert manual version
+dynamic = ["version"]
+#version = "2.0.2" # Insert manual version
 #dynamic = ["version", "dependencies"]
 authors = [
    { name="Vitalii Sili", email="vitaliisili@yahoo.com" },
