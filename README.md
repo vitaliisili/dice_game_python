@@ -30,7 +30,7 @@ git clone https://github.com/vitaliisili/dice_game_python
 pip install -r requirements.txt
 ```
 
-- Step 3: Go to directory `src/baboo_game and` and run file `main.py`
+- Step 3: Go to directory `src/baboo_game` and run file `main.py`
 ```bash
 python3 main.py
 ```
