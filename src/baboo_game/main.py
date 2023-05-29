@@ -1,9 +1,9 @@
 if __package__ is None or __package__ == '':
     # uses current directory visibility
-    from game.rander_game import RanderGame
+    from game.render_game import RanderGame
 else:
     # uses current package visibility
-    from .game.rander_game import RanderGame
+    from .game.render_game import RanderGame
 
 
 def start():
