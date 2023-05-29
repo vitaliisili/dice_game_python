@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=65", "setuptools-git-versioning", "wheel"]
+requires = ["setuptools>=65", "setuptools-git-versioning"]
 build-backend = "setuptools.build_meta"
 [project]
 name = "baboo_game"
