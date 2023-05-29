@@ -9,6 +9,7 @@ from .baboo_game import BabooGame
 
 class RanderGame:
     def __init__(self):
+        print("\x1b[8;40;90t")  # This line is for resizing user terminal
         print(self.__show_text(text.WELCOME_MESSAGE, color.YELLOW))
         print(self.__show_text(text.DICE_IMAGE, color.BLUE))
         self.__player_name = self.__get_player_name()
@@ -58,8 +59,8 @@ class RanderGame:
                                        color.RED))
 
     def __show_die_menu(self):
-        print(self.__show_text("""
-1. D4(4 faces)     2. D6(6 faces)      3. D8(8 faces)      4. Exit
+        print(self.__show_text(f"""
+1. D4({cfg.DIE4_COST} Cr.)     2. D6({cfg.DIE6_COST} Cr.)      3. D8({cfg.DIE8_COST} Cr.)      4. Exit
         """))
         current_balance = self.__game.credit_balance
         while True:
