@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=65", "setuptools_scm[toml]", "wheel"]
+requires = ["setuptools>=65", "setuptools-git-versioning", "wheel"]
 build-backend = "setuptools.build_meta"
 [project]
 name = "baboo_game"
@@ -20,8 +20,8 @@ classifiers = [
    "License :: OSI Approved :: MIT License",
    "Operating System :: OS Independent",
 ]
-[tool.setuptools_scm]
-write_to = "baboo_game/_version.py"
+[tool.setuptools-git-versioning]
+enabled = true
 #[tool.setuptools.dynamic]
 #dependencies = {file = ["requirements.txt"]}
 #keywords = ["dicegame", "python", "console game"]
