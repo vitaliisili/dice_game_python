@@ -3,8 +3,8 @@ requires = ["setuptools>=61.0", "setuptools_scm[toml]"]
 build-backend = "setuptools.build_meta"
 [project]
 name = "baboo_game"
-#version = "2.0.1" # Insert manual version
-dynamic = ["version", "dependencies"]
+version = "2.0.1" # Insert manual version
+#dynamic = ["version", "dependencies"]
 authors = [
    { name="Vitalii Sili", email="vitaliisili@yahoo.com" },
 ]
@@ -19,12 +19,12 @@ classifiers = [
    "License :: OSI Approved :: MIT License",
    "Operating System :: OS Independent",
 ]
-[tool.setuptools_scm]
-write_to = "epi_models/_version.py"
-[tool.setuptools.dynamic]
-dependencies = {file = ["requirements.txt"]}
-keywords = ["dicegame", "python", "console game"]
-#dependencies = ["colorama>=0.4.6"]  # Insert manualy dependencies
+#[tool.setuptools_scm]
+#write_to = "epi_models/_version.py"
+#[tool.setuptools.dynamic]
+#dependencies = {file = ["requirements.txt"]}
+#keywords = ["dicegame", "python", "console game"]
+dependencies = ["colorama>=0.4.6"]  # Insert manualy dependencies
 #[project.optional-dependencies]
 #dev = ["pytest", "isort"]
 [project.urls]
