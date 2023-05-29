@@ -24,7 +24,7 @@ WELCOME_MESSAGE = f"""{BLUE}
 {RESET}
 """
 
-DICE_IMAGE = f"""
+DICE_IMAGE = f'''
                    ,,╥╦╦ΦD╬╫╫╫▓▓▄╥
                ,╔R",╦╫╫╨╓╔╬╫▓▓███▓▓╕
            ,╥]╫╫╫Ñ╫╫╫╫╫╫▓▓▓████████▓╕
@@ -52,26 +52,47 @@ DICE_IMAGE = f"""
                                           `"╙▀▀▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██▓▓▓▓▓▓▓▀╜"`
                                                   ``╙╙▀▀▓▓▓▓▓▓████▀╜`
 
-
-                                ✩░▒▓▆▅▃▂▁𝐇𝐎𝐖 𝐓𝐎 𝐏𝐋𝐀𝐘▁▂▃▅▆▓▒░✩
-                                
-✩ You start the game with initial balance {INITIAL_BALANCE} credits
-✩ You start the game with two dice D4 (4 faces)
-✩ Each roll costs {ROLL_COST} credits
-✩ When your credit balance is less than {ROLL_COST} credits, is not possible to do more rolls and game is over
-✩ You can buy a new Die D4(4 faces), D6(6 faces) , or D8(8 faces)
-✩ You can add new purchased die to the end of your board or change one of your existing Die
-✩ Each Die cost credits D4 - {DIE4_COST}, D6 - {DIE6_COST} and D8 - {DIE8_COST}
-✩ You can't buy a Die if you don't have enough credits min {ROLL_COST} plus Die price
-✩ You win when all die faces have the same number example: [3, 3] or [4, 4]
-✩ When you win you get credits: sum of all dice current face plus number of dice do you have and multiply by {ROLL_COST}
-✩ All credits will be added to your balance
-✩ After each roll you decide what to do:  1.Continue, 2.Add new die, 3.Roll specific dice, 4. Withdraw and finish the game
-✩ Create your own strategy buy, change, roll only specific dice, earn more credits
-✩ Good luck and enjoy the game !!!
-
-
-"""
+                                      ,---.           ,---.
+                                     / /"`.\.--"""--./,'"\\ \\
+                                     \ \    _       _    / /
+                                      `./  / __   __ \  \,'
+                                       /    /_O)_(_O\    \\
+                                       |  .-'  ___  `-.  |
+                                    .--|       \_/       |--.
+                                  ,'    \   \   |   /   /    `.
+                                 /       `.  `--^--'  ,'       \\
+                              .-"""""-.    `--.___.--'     .-"""""-.
+ .---------------------------/         \------------------/         \---------------------------.
+ | .-------------------------\         /----------------- \         /-------------------------. |
+ | |                          `-`--`--'                    `--'--'-'                          | |
+ | |                                  How To Play Baboo Game                                  | |
+ | |                                                                                          | |
+ | | ✩ You start the game with initial balance {INITIAL_BALANCE} credits                                   | |
+ | | ✩ You start the game with two dice D4 (4 faces)                                          | |
+ | | ✩ Each roll costs {ROLL_COST} credits                                                            | |
+ | | ✩ When your credit balance is less than {ROLL_COST} credits,                                     | |
+ | |   is not possible to do more rolls and game is over                                      | |
+ | | ✩ You can buy a new Die D4(4 faces), D6(6 faces) , or D8(8 faces)                        | |
+ | | ✩ You can add new purchased die to the end of your board or change with existing one     | |
+ | | ✩ Each Die cost credits D4 - {DIE4_COST}, D6 - {DIE6_COST} and D8 - {DIE8_COST}                                  | |
+ | | ✩ You can't buy a Die if you don't have enough credits min {ROLL_COST} plus Die price            | |
+ | | ✩ You win when all die faces have the same number example: [3, 3] or [4, 4]              | |
+ | | ✩ When you win you get credits: sum of all dice current face plus number                 | |
+ | |   of dice do you have and multiply by {ROLL_COST}                                                | |
+ | | ✩ After each roll you decide what to do:  1.Continue, 2.Add new die, 3.Roll specific dice| |
+ | |   4. Withdraw and finish the game                                                        | |
+ | | ✩ Create your own strategy buy, change, roll only specific dice, earn more credits       | |
+ | | ✩ Good luck and enjoy the game !!!                                                       | |
+ | |__________________________________________________________________________________________| |
+ |______________________________________________________________________________________________|
+                                   )__________|__|__________(
+                                  |            ||            |
+                                  |____________||____________|
+                                    ),-----.(      ),-----.(
+                                  ,'   ==.   \    /  .==    `.
+                                 /            )  (            \\
+                                 `==========='    `==========='
+'''
 
 START_GAME = f"""
 ▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ {YELLOW}THE GAME IS STARTED, GOOD LUCK{RESET} ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀ \n
@@ -145,15 +166,15 @@ CONGRATULATIONS = f'''
                             ,'    \   \   |   /   /    `.
                            /       `.  `--^--'  ,'       \\
                         .-"""""-.    `--.___.--'     .-"""""-.
-           .-----------/         \------------------/         \--------------.
-           | .---------\         /----------------- \         /------------. |
-           | |          `-`--`--'                    `--'--'-'             | |
-           | |                     CONGRATULATIONS                         | |
-           | |                         YOU WIN                             | |
-           | |                     %s CREDITS                            
-           | |                                                             | |
-           | |_____________________________________________________________| |
-           |_________________________________________________________________|
+           .-----------/         \------------------/         \-----------.
+           | .---------\         /----------------- \         /---------. |
+           | |          `-`--`--'                    `--'--'-'          | |
+           | |                     CONGRATULATIONS                      | |
+           | |                         YOU WIN                          | |
+           | |                       %s CREDITS                         
+           | |                                                          | |
+           | |__________________________________________________________| |
+           |______________________________________________________________|
                               )__________|__|__________(
                              |            ||            |
                              |____________||____________|

@@ -9,7 +9,7 @@ from .baboo_game import BabooGame
 
 class RanderGame:
     def __init__(self):
-        print("\x1b[8;40;90t")  # This line is for resizing user terminal
+        print("\x1b[8;43;98t")  # This line is for resizing user terminal
         print(self.__show_text(text.WELCOME_MESSAGE, color.YELLOW))
         print(self.__show_text(text.DICE_IMAGE, color.BLUE))
         self.__player_name = self.__get_player_name()
