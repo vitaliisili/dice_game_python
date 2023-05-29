@@ -3,6 +3,7 @@
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 ![Release](https://img.shields.io/github/v/release/vitaliisili/dice_game_python)
 ![PyPI version](https://img.shields.io/pypi/v/baboo-game)
+![License](https://img.shields.io/github/license/vitaliisili/dice_game_python)
 ![Watchers](https://img.shields.io/github/watchers/vitaliisili/dice_game_python?style=social)
 
 #### *Welcome to Baboo Dice Game, an exciting and addictive dice game that will test your luck and strategy!* 
