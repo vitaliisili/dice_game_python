@@ -3,7 +3,7 @@ import sys
 from .config import color_config as color
 from .config import text_constant as text
 from .config import game_config as cfg
-from .lib.abstract_dice import Dice, D4, D6, D8
+from .library.abstract_dice import Dice, D4, D6, D8
 from .baboo_game import BabooGame
 
 

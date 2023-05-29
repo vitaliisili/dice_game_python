@@ -1,4 +1,4 @@
-from .lib.abstract_dice import *
+from .library.abstract_dice import *
 from .config.game_config import *
 
 
