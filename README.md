@@ -38,8 +38,8 @@ Or use your favorite IDE to run `main.py`
 &nbsp;
 
 &nbsp;
-### ***Method 2***:  *Use `pip` and install baboo-game from [PyPi]('https://pypi.org/project/baboo-game/)*
-- Step 1: Install baboo-game package from [PyPi]('https://pypi.org/project/baboo-game/)
+### ***Method 2***:  *Use `pip` and install baboo-game from <a href="https://pypi.org/project/baboo-game/" target="_blank">PyPi</a>*
+- Step 1: Install baboo-game package from <a href="https://pypi.org/project/baboo-game/" target="_blank">PyPi</a>
 ```bash
 pip install baboo-game 
 ```
@@ -53,6 +53,7 @@ from baboo_game import main
 ```python
 main.start()
 ```
-***If you need `Virtual Environment` in Python look [here](https://www.freecodecamp.org/news/how-to-setup-virtual-environments-in-python/)***
+
+***If you need `Virtual Environment` in Python look <a href="https://www.freecodecamp.org/news/how-to-setup-virtual-environments-in-python/" target="_blank">here</a>***
 
 ![baboo](https://lh3.googleusercontent.com/bX55HaA98EqlNIre9gkICrZ7Cndd0qMowjG5TkgpkNK3IE2YRF2UA94Rj6-ucKaySz9E3Yx60VR2dfNkCCZAowZbNwmeQTWM0dJZQoANHFXohCvnBbI9gpMQa9YLXjoT9lGmEnJAZRDSpm9Vb9Ix6-MAMJ-LLp2zd3zaBJbRsphWTv_tVzmJDFM7_-xTeu0fShmpW7Yrka9sx7ISIm67-Lr_Y3vzieRllStQ5cZyCUp0Lc_eg6nig5PNIPE-bpUbYelskEiOEVKovq9l9_ggt4VXuk7mLlpmfMOtLpL7m8qpG2KK2pEljOeHcfUkcahfNgEPOsCKroy3GwGT4xKwD7SguwW7kzvFUlFUaGJlAd-mSFa7O4jY5GRMDw4Y0MLBdoRPAHcKBKYf36GrssVRUYp3TcDLtW2cDkHi6Hdzmvupek1xJ22AxLKCy7wJTMSMLEVyEuBbS0wt-xS5zfoUWH5GepUgNSoOUvWCQm86TZ6c1G4oahIPqNwMo5ALTalyb0SmshQKy0NZCxNJihXROTxA5Mgl1D85dnKIrbdYG29Vy6hGhAloNnSoq9287jfm5__om5y6Xbm7auum8MimVt9eZ4akGsI-_LaVB1LNMSM_KFHFt_Uvgxf_5RvWomuPti_vKlZ21Eg8NsKbIi5LXTnOqIfbn-dGqlrfvjHE1siM2D2l7hsWwb_SC3FEyunAErNmg_CFi8-GpahlRL3OSUIhbpFbKWctV04Z1_yQ3vfDnhnmb_2qrxIr5-3nJhxvp6IwrmxtIYp266qwSem28QIysbV-ubUADQuQ92h8LnZpN8Lp-BzGHz3-sfeHKRAICQmpCTSFCA9rEIjslCTpard1pxp56az3apgz2aERIUEhefvdV4pcmB-9zc-vpiW2Yxs_nFRB1PteTPiNGnwpOB0qN89mOilrQ97eaB2L4eKAXDT6SOJpiYAvimtI4PbBYswKuN_ZTlanj5FdULpV=w800-h600-s-no?authuser=0)
