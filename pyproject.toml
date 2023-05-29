@@ -25,7 +25,7 @@ write_to = "baboo_game/_version.py"
 #[tool.setuptools.dynamic]
 #dependencies = {file = ["requirements.txt"]}
 #keywords = ["dicegame", "python", "console game"]
-dependencies = ["colorama>=0.4.6"]  # Insert manualy dependencies
+dependencies = ["colorama>=0.4.6", 'importlib_metadata; python_version < "3.8"']  # Insert manualy dependencies
 #[project.optional-dependencies]
 #dev = ["pytest", "isort"]
 [project.urls]
