@@ -9,6 +9,13 @@
 
 ![baboo](https://lh3.googleusercontent.com/pw/AJFCJaWOlNjWnEZ6Lcp7Z8AE3YGCv1CaVTXDX-9VXJxfnNVw_Qljmyfhx-khr0Shs1wI2oESp3tbQ8dmKpcmOHViL-OoKLZE10lQ1qUbnz7cikdgstf7bFq7fds7V1WK7DTMOjJejmubcV0MMieJMfxASOtl=w577-h433-s-no)
 
+*Gather your friends, set up the scoreboards, 
+and prepare to dive into the thrilling world 
+of Baboo Dice Game. Roll the dice, make strategic 
+choices, and aim for the highest score to emerge 
+as the ultimate dice champion! It's time to test
+your luck, strategy, and decision-making skills 
+in this addictive and enjoyable dice game.*
 
 ## How to run
 ### ***Method 1***:  *Download or Clone source file:*
