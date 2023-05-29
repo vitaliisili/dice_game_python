@@ -19,10 +19,10 @@ classifiers = [
    "License :: OSI Approved :: MIT License",
    "Operating System :: OS Independent",
 ]
-[tool.setuptools.dynamic]
-dependencies = {file = "requirements.txt"}
+#[tool.setuptools.dynamic]
+#dependencies = {file = "requirements.txt"}
 keywords = ["dicegame", "python", "console game"]
-#dependencies = ["colorama>=0.4.6"]
+dependencies = ["colorama>=0.4.6"]
 #[project.optional-dependencies]
 #dev = ["pytest", "isort"]
 [project.urls]
