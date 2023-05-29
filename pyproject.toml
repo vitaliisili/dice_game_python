@@ -1,10 +1,9 @@
 [build-system]
-requires = ["setuptools>=65", "setuptools-git-versioning"]
+requires = ["setuptools>=65"]
 build-backend = "setuptools.build_meta"
 [project]
 name = "baboo_game"
-dynamic = ["version"]
-#version = "2.0.2" # Insert manual version
+version = "2.0.5" # Insert manual version
 #dynamic = ["version", "dependencies"]
 authors = [
    { name="Vitalii Sili", email="vitaliisili@yahoo.com" },
@@ -20,11 +19,9 @@ classifiers = [
    "License :: OSI Approved :: MIT License",
    "Operating System :: OS Independent",
 ]
-[tool.setuptools-git-versioning]
-enabled = true
-#[tool.setuptools.dynamic]
-#dependencies = {file = ["requirements.txt"]}
-#keywords = ["dicegame", "python", "console game"]
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+keywords = ["dicegame", "python", "console game"]
 dependencies = ["colorama>=0.4.6", 'importlib_metadata; python_version < "3.8"']  # Insert manualy dependencies
 #[project.optional-dependencies]
 #dev = ["pytest", "isort"]
