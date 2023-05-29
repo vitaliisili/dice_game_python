@@ -19,7 +19,7 @@ classifiers = [
    "License :: OSI Approved :: MIT License",
    "Operating System :: OS Independent",
 ]
-[project]
+
 dynamic = ["dependencies"] # Extract dependencies from requirements.txt file
 [tool.setuptools.dynamic]
 dependencies = {file = ["requirements.txt"]}
