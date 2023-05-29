@@ -19,6 +19,8 @@ classifiers = [
    "License :: OSI Approved :: MIT License",
    "Operating System :: OS Independent",
 ]
+[tool.setuptools_scm]
+write_to = "epi_models/_version.py"
 [tool.setuptools.dynamic]
 dependencies = {file = ["requirements.txt"]}
 keywords = ["dicegame", "python", "console game"]
