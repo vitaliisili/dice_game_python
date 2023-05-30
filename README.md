@@ -25,7 +25,7 @@ in this addictive and enjoyable dice game.*
 git clone https://github.com/vitaliisili/dice_game_python
 ```
 
-- Step 2: Install all requirements run command below
+- Step 2:Go to project folder and install all requirements run command below
 ```bash
 pip install -r requirements.txt
 ```
