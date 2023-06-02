@@ -56,4 +56,4 @@ main.start()
 
 ***If you need `Virtual Environment` in Python look <a href="https://www.freecodecamp.org/news/how-to-setup-virtual-environments-in-python/" target="_blank">here</a>***
 
-![baboobottom](https://i.ibb.co/jgc2zzR/bottom.pnf)
+![baboobottom](https://i.ibb.co/jgc2zzR/bottom.png)
